@@ -4,7 +4,7 @@ const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
-const slideCounter = document.getElementById('slide-counter');
+const slideNumDisplay = document.getElementById('slide-num');
 const progress = document.getElementById('progress');
 
 // ===== SHOW SLIDE =====
@@ -15,7 +15,7 @@ function showSlide(index) {
 
   currentSlideIndex = index;
 
-  // Update classes
+  // Update visibility
   slides.forEach((slide, i) => {
     slide.classList.toggle('active', i === currentSlideIndex);
   });
@@ -25,16 +25,11 @@ function showSlide(index) {
   nextBtn.disabled = currentSlideIndex === totalSlides - 1;
 
   // Update counter
-  slideCounter.textContent = `Slide ${currentSlideIndex + 1} / ${totalSlides}`;
+  slideNumDisplay.textContent = `Slide ${currentSlideIndex + 1} / ${totalSlides}`;
 
   // Update progress bar
-  const pct = (currentSlideIndex + 1) / totalSlides;
-  progress.style.transform = `scaleX(${pct})`;
-
-  // Animate seat bars if on structure slide (Slide 3)
-  if (currentSlideIndex === 2) {
-    animateBars();
-  }
+  const pct = ((currentSlideIndex + 1) / totalSlides) * 100;
+  progress.style.width = `${pct}%`;
 }
 
 // ===== NAVIGATION =====
@@ -43,9 +38,9 @@ prevBtn.addEventListener('click', () => showSlide(currentSlideIndex - 1));
 
 // Keyboard support
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowRight' || e.key === ' ') {
+  if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
     showSlide(currentSlideIndex + 1);
-  } else if (e.key === 'ArrowLeft') {
+  } else if (e.key === 'ArrowLeft' || e.key === 'Backspace') {
     showSlide(currentSlideIndex - 1);
   }
 });
@@ -54,31 +49,12 @@ document.addEventListener('keydown', (e) => {
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
 let isDark = true;
+
 themeToggle.addEventListener('click', () => {
   isDark = !isDark;
   html.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  themeToggle.textContent = isDark ? '🌙' : '☀️';
+  themeToggle.textContent = isDark ? '☀️ Theme' : '🌙 Theme';
 });
-
-// ===== SEAT BARS ANIMATION =====
-function animateBars() {
-  const barFills = document.querySelectorAll('.seat-bar-fill');
-  barFills.forEach(b => {
-    // Store original width if not already stored
-    if (!b.dataset.targetWidth) {
-      b.dataset.targetWidth = b.style.width;
-    }
-    
-    b.style.transition = 'none';
-    b.style.width = '0';
-    
-    // Force reflow
-    b.offsetHeight;
-    
-    b.style.transition = 'width 1s ease';
-    b.style.width = b.dataset.targetWidth;
-  });
-}
 
 // Initialize
 showSlide(0);
