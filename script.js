@@ -9,6 +9,13 @@ const progress = document.getElementById('progress');
 
 // ===== SHOW SLIDE =====
 function showSlide(index) {
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  const slideNumDisplay = document.getElementById('slide-num');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const progress = document.getElementById('progress');
+
   // Clamp index
   if (index < 0) index = 0;
   if (index >= totalSlides) index = totalSlides - 1;
