@@ -20,26 +20,17 @@
 <!-- NAV -->
 <nav>
   <div class="nav-brand">🇵🇰 Pakistan Parliament</div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#intro">Intro</a></li>
-    <li><a href="#structure">Structure</a></li>
-    <li><a href="#working">Working</a></li>
-    <li><a href="#challenges">Challenges</a></li>
-    <li><a href="#timeline-section">Timeline</a></li>
-    <li><a href="#conclusion">Conclusion</a></li>
-  </ul>
   <div class="nav-controls">
     <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
   </div>
 </nav>
 
 <!-- MAIN -->
-<main>
+<main id="slide-container">
 
-  <!-- ===== HERO ===== -->
-  <section id="intro" class="reveal">
+  <!-- ===== SLIDE 1: HERO ===== -->
+  <div class="slide active" id="slide-1">
     <div class="hero">
-      <!-- Hero Main Card -->
       <div class="glass hero-main">
         <div class="hero-tag">Est. 1973 Constitution</div>
         <h1 class="hero-title">
@@ -64,54 +55,55 @@
           </div>
         </div>
       </div>
-      <!-- Hero Image -->
       <div class="glass hero-image" style="padding:0;">
-        <img src="D:\OneDrive - Higher Education Commission\Web Development Projects\Presentations\Pakistan Studies\images\parliament-house.png"
-             alt="Parliament House of Pakistan"
-             loading="lazy">
+        <img src="images/parliament-house.png" alt="Parliament House of Pakistan">
         <div class="hero-image-overlay"></div>
         <div class="hero-image-caption">Parliament House · Islamabad, Pakistan</div>
       </div>
     </div>
+  </div>
 
-    <!-- Intro Mini Cards -->
+  <!-- ===== SLIDE 2: INTRO MINI CARDS ===== -->
+  <div class="slide" id="slide-2">
+    <div class="section-label">01 — Core Leadership</div>
     <div class="bento-grid bento-3col">
-      <div class="glass card card-accent-green reveal">
+      <div class="glass card card-accent-green">
         <div class="card-icon">🏛️</div>
         <div class="badge badge-green">Head of State</div>
         <div class="card-title">The President</div>
         <div class="card-body">Represents the <strong>unity of the Republic</strong>. A ceremonial role with constitutional powers including summoning/proroguing Parliament and granting assent to Bills.</div>
       </div>
-      <div class="glass card card-accent-blue reveal">
+      <div class="glass card card-accent-blue">
         <div class="card-icon">⚖️</div>
         <div class="badge badge-blue">Head of Government</div>
         <div class="card-title">Prime Minister</div>
         <div class="card-body">Chief Executive of Pakistan, leads the <strong>Federal Cabinet</strong>, commands the majority in the National Assembly and is accountable to it.</div>
       </div>
-      <div class="glass card card-accent-gold reveal">
+      <div class="glass card card-accent-gold">
         <div class="card-icon">📜</div>
         <div class="badge badge-gold">Foundation</div>
         <div class="card-title">1973 Constitution</div>
         <div class="card-body">Established the <strong>Federal Parliamentary Republic</strong>. The supreme law of the land, enshrining fundamental rights and the separation of powers across three branches.</div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ===== STRUCTURE ===== -->
-  <section id="structure" class="section reveal" style="margin-top:56px;">
-    <div class="section-label">02 — Majlis-e-Shoora</div>
-    <h2 class="section-title">Bicameral Structure of Parliament</h2>
-
-    <div class="bento-grid bento-3col-wide" style="margin-bottom:16px;">
-      <!-- National Assembly Big Card -->
-      <div class="glass card-lg card-accent-green reveal">
-        <div class="badge badge-green">Lower House</div>
-        <h3 class="card-title" style="font-size:1.3rem; margin-bottom: 4px;">National Assembly</h3>
-        <div class="card-body" style="margin-bottom:20px;">The directly elected lower chamber — the supreme legislative body where governments are formed and fallen.</div>
+  <!-- ===== SLIDE 3: STRUCTURE - NATIONAL ASSEMBLY ===== -->
+  <div class="slide" id="slide-3">
+    <div class="section-label">02 — Majlis-e-Shoora (Structure)</div>
+    <h2 class="section-title">The National Assembly (Lower House)</h2>
+    <div class="glass card-lg card-accent-green">
+      <div class="badge badge-green">Lower House</div>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:32px;">
+        <div>
+          <h3 class="card-title" style="font-size:1.5rem;">National Assembly</h3>
+          <div class="card-body" style="font-size:1rem; margin-bottom:20px;">The directly elected lower chamber — the supreme legislative body where governments are formed and fallen.</div>
+          <div class="card-body">Elected for a <strong>5-year term</strong>. Represents population demographics. All <strong>Money Bills</strong> must originate here.</div>
+        </div>
         <div class="seat-visual">
           <div>
             <div class="big-num">336</div>
-            <div style="font-size:0.72rem; color: var(--text-muted);">Total Seats</div>
+            <div style="font-size:0.8rem; color: var(--text-muted);">Total Seats</div>
           </div>
           <div class="seat-bar-wrap">
             <div class="seat-row">
@@ -128,12 +120,15 @@
             </div>
           </div>
         </div>
-        <div class="divider"></div>
-        <div class="card-body">Elected for a <strong>5-year term</strong>. Represents population demographics. All <span class="tooltip-trigger">Money Bills<span class="tooltip-box">Money Bills deal with taxation, government expenditure, and public finances. They can only originate in the National Assembly — the Senate can only make recommendations within 14 days.</span></span> must originate here.</div>
       </div>
+    </div>
+  </div>
 
-      <!-- Senate -->
-      <div class="glass card card-accent-blue reveal">
+  <!-- ===== SLIDE 4: STRUCTURE - SENATE & PRESIDENT ===== -->
+  <div class="slide" id="slide-4">
+    <div class="section-label">02 — Majlis-e-Shoora (Structure)</div>
+    <div class="bento-grid bento-2col">
+      <div class="glass card card-accent-blue">
         <div class="badge badge-blue">Upper House</div>
         <h3 class="card-title">Senate</h3>
         <div class="big-num big-num-gold" style="font-size:2.8rem;">96</div>
@@ -141,350 +136,252 @@
         <div class="divider" style="background: var(--accent2);"></div>
         <div class="card-body">Staggered <strong>6-year terms</strong>. Ensures equal provincial representation regardless of population. Each of the 4 provinces sends equal senators.</div>
       </div>
-
-      <!-- President -->
-      <div class="glass card card-accent-gold reveal">
+      <div class="glass card card-accent-gold">
         <div class="badge badge-gold">Third Pillar</div>
         <h3 class="card-title">The President</h3>
         <div class="card-body">As the third pillar of Parliament, the President must give <strong>assent to Bills</strong> or return them for reconsideration. Forms the apex of the legislative triangle.</div>
         <div class="quote-block">"The President shall be elected by members of both Houses of Parliament in joint sitting." — Article 41</div>
       </div>
     </div>
+  </div>
 
-    <!-- Image Row -->
+  <!-- ===== SLIDE 5: IMAGES ===== -->
+  <div class="slide" id="slide-5">
+    <div class="section-label">02 — Majlis-e-Shoora (Visuals)</div>
     <div class="bento-grid bento-2col">
-      <div class="glass img-card reveal" style="min-height:250px; padding:0;">
-        <img src="D:\OneDrive - Higher Education Commission\Web Development Projects\Presentations\Pakistan Studies\images\national-assembly.png"
-             alt="National Assembly Hall Interior" loading="lazy">
+      <div class="glass img-card" style="height:400px; padding:0;">
+        <img src="images/national-assembly.png" alt="National Assembly Hall">
         <div class="img-card-overlay">
           <div class="img-card-title">National Assembly Hall</div>
           <div class="img-card-sub">Islamabad · Capacity 342</div>
         </div>
       </div>
-      <div class="glass img-card reveal" style="min-height:250px; padding:0;">
-        <img src="D:\OneDrive - Higher Education Commission\Web Development Projects\Presentations\Pakistan Studies\images\senate-hall.png"
-             alt="Senate Hall Interior" loading="lazy">
+      <div class="glass img-card" style="height:400px; padding:0;">
+        <img src="images/senate-hall.png" alt="Senate Chamber">
         <div class="img-card-overlay">
           <div class="img-card-title">Senate Chamber</div>
           <div class="img-card-sub">Islamabad · Upper House</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ===== WORKING ===== -->
-  <section id="working" class="section reveal" style="margin-top:56px;">
+  <!-- ===== SLIDE 6: WORKING - LAW MAKING ===== -->
+  <div class="slide" id="slide-6">
     <div class="section-label">03 — Legislative Engine</div>
-    <h2 class="section-title">How Parliament Works</h2>
-
-    <div class="bento-grid bento-3col" style="margin-bottom:16px;">
-      <!-- Law Making -->
-      <div class="glass card expand-trigger reveal pulse" id="lawCard">
-        <div class="badge badge-green">Core Process</div>
-        <h3 class="card-title">🏛️ Law-Making Process</h3>
-        <div class="process-steps">
+    <h2 class="section-title">Law-Making Process</h2>
+    <div class="glass card card-accent-green">
+      <div class="process-steps" style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+        <div>
           <div class="step"><div class="step-num">1</div><div class="step-text"><strong>First Reading</strong> — Bill introduced, title read.</div></div>
           <div class="step"><div class="step-num">2</div><div class="step-text"><strong>Second Reading</strong> — General principles debated, sent to Standing Committee.</div></div>
           <div class="step"><div class="step-num">3</div><div class="step-text"><strong>Committee Stage</strong> — Clause-by-clause scrutiny and amendments.</div></div>
+        </div>
+        <div>
           <div class="step"><div class="step-num">4</div><div class="step-text"><strong>Third Reading</strong> — Final vote in the house.</div></div>
           <div class="step"><div class="step-num">5</div><div class="step-text"><strong>Other House</strong> — Same process repeated.</div></div>
           <div class="step"><div class="step-num">6</div><div class="step-text"><strong>Presidential Assent</strong> — Bill becomes Act of Parliament.</div></div>
         </div>
-        <div class="expand-more" id="lawMore">
-          <p>Ordinary bills may originate in <strong>either house</strong>. However, <span class="tooltip-trigger">Money Bills<span class="tooltip-box">Money Bills include appropriations, taxation, and public debt matters. Only the National Assembly can originate them.</span></span> can only be introduced in the National Assembly. If both houses disagree, a joint sitting resolves the deadlock by simple majority.</p>
-        </div>
-        <button class="expand-btn" onclick="toggleExpand('lawMore', this)">
-          Learn more <span class="arrow">▾</span>
-        </button>
       </div>
+      <div class="divider"></div>
+      <div class="card-body">Ordinary bills may originate in <strong>either house</strong>. However, <strong>Money Bills</strong> can only be introduced in the National Assembly. If both houses disagree, a joint sitting resolves the deadlock.</div>
+    </div>
+  </div>
 
-      <!-- Committees -->
-      <div class="glass card card-accent-blue reveal">
+  <!-- ===== SLIDE 7: WORKING - COMMITTEES & ACCOUNTABILITY ===== -->
+  <div class="slide" id="slide-7">
+    <div class="section-label">03 — Legislative Engine (Oversight)</div>
+    <div class="bento-grid bento-2col">
+      <div class="glass card card-accent-blue">
         <div class="badge badge-blue">Oversight</div>
         <h3 class="card-title">📋 Standing Committees</h3>
-        <div class="card-body" style="margin-bottom:14px;">
-          The backbone of parliamentary oversight. Each ministry has a corresponding committee that scrutinizes legislation, examines budgets, and holds the executive accountable.
-        </div>
+        <div class="card-body" style="margin-bottom:14px;">The backbone of parliamentary oversight. Each ministry has a corresponding committee that scrutinizes legislation and holds the executive accountable.</div>
         <div class="challenge-list">
-          <div class="challenge-item">
-            <div class="challenge-icon">🔍</div>
-            <div class="challenge-text"><strong>Scrutiny Role</strong> — Detailed examination of Bills clause by clause before final vote.</div>
-          </div>
-          <div class="challenge-item">
-            <div class="challenge-icon">📊</div>
-            <div class="challenge-text"><strong>Oversight Role</strong> — Monitor executive performance and ministry spending.</div>
-          </div>
+          <div class="challenge-item"><div class="challenge-icon">🔍</div><div class="challenge-text"><strong>Scrutiny Role</strong> — Detailed examination of Bills.</div></div>
+          <div class="challenge-item"><div class="challenge-icon">📊</div><div class="challenge-text"><strong>Oversight Role</strong> — Monitor executive performance.</div></div>
         </div>
       </div>
-
-      <!-- Accountability -->
-      <div class="glass card card-accent-gold reveal">
+      <div class="glass card card-accent-gold">
         <div class="badge badge-gold">Accountability</div>
         <h3 class="card-title">⚖️ Executive Accountability</h3>
-        <div class="card-body" style="margin-bottom:14px;">
-          The Prime Minister and Cabinet are <strong>collectively responsible</strong> to the National Assembly — a cornerstone of the parliamentary system.
-        </div>
-        <div class="divider" style="background: var(--gold);"></div>
-        <div class="card-body">
-          The <span class="tooltip-trigger">Vote of No-Confidence<span class="tooltip-box">A Vote of No-Confidence removes the Prime Minister if a majority of the National Assembly members vote against them. The PM must resign. Pakistan used this mechanism in April 2022.</span></span> mechanism allows Parliament to remove the Prime Minister when they lose majority support, without requiring an election.
-        </div>
-        <div class="quote-block" style="margin-top:14px;">Absolute power is checked by collective parliamentary responsibility.</div>
+        <div class="card-body">The Prime Minister and Cabinet are <strong>collectively responsible</strong> to the National Assembly.</div>
+        <div class="quote-block">The <strong>Vote of No-Confidence</strong> mechanism allows Parliament to remove the PM when they lose majority support.</div>
       </div>
     </div>
+  </div>
 
-    <!-- Info strip -->
-    <div class="glass card reveal" style="background: linear-gradient(90deg, rgba(1,170,110,0.1), rgba(0,212,255,0.08));">
-      <div style="display:flex; align-items:center; gap:24px; flex-wrap:wrap;">
-        <div class="card-icon" style="margin:0;">📌</div>
+  <!-- ===== SLIDE 8: WORKING - JOINT SITTING ===== -->
+  <div class="slide" id="slide-8">
+    <div class="section-label">03 — Legislative Engine (Resolution)</div>
+    <h2 class="section-title">Joint Sitting — Deadlock Breaker</h2>
+    <div class="glass card-lg" style="background: linear-gradient(90deg, rgba(1,170,110,0.1), rgba(0,212,255,0.08));">
+      <div style="display:flex; align-items:center; gap:32px;">
+        <div class="card-icon" style="font-size:3rem; width:80px; height:80px;">📌</div>
         <div>
-          <div class="card-title" style="margin-bottom:4px;">Joint Sitting — Deadlock Breaker</div>
-          <div class="card-body">When the two Houses disagree on a Bill, a <strong>Joint Sitting</strong> of both houses is convened. The Bill is passed if approved by a majority of total members present and voting in the joint sitting.</div>
+          <div class="card-title" style="font-size:1.5rem; margin-bottom:12px;">Resolving Deadlocks</div>
+          <div class="card-body" style="font-size:1.1rem;">When the two Houses disagree on a Bill, a <strong>Joint Sitting</strong> of both houses is convened. The Bill is passed if approved by a majority of total members present and voting in the joint sitting.</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ===== CHALLENGES ===== -->
-  <section id="challenges" class="section reveal" style="margin-top:56px;">
+  <!-- ===== SLIDE 9: CHALLENGES - ORDINANCES ===== -->
+  <div class="slide" id="slide-9">
     <div class="section-label">04 — Critical Issues</div>
-    <h2 class="section-title">Continuous Challenges</h2>
-
-    <div class="bento-grid bento-2col" style="margin-bottom:16px;">
-      <div class="glass card card-accent-red reveal">
-        <div class="badge badge-red">⚠️ Systemic Issue</div>
-        <h3 class="card-title">Presidential Ordinances</h3>
-        <div class="card-body" style="margin-bottom:14px;">Pakistan has developed a pattern of <strong>routine reliance</strong> on Presidential Ordinances to bypass standard parliamentary debate. An Ordinance is valid for 120 days unless approved by Parliament.</div>
+    <h2 class="section-title">Presidential Ordinances</h2>
+    <div class="glass card-lg card-accent-red">
+      <div class="badge badge-red">⚠️ Systemic Issue</div>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:32px;">
+        <div>
+          <div class="card-body" style="font-size:1rem; margin-bottom:14px;">Pakistan has a pattern of <strong>routine reliance</strong> on Presidential Ordinances to bypass standard parliamentary debate. Valid for 120 days unless approved.</div>
+        </div>
         <div class="challenge-list">
-          <div class="challenge-item">
-            <div class="challenge-icon">🚫</div>
-            <div class="challenge-text">Bypasses <strong>democratic deliberation</strong> — bills with national impact avoid parliamentary scrutiny.</div>
-          </div>
-          <div class="challenge-item">
-            <div class="challenge-icon">🔄</div>
-            <div class="challenge-text">Ordinances are often <strong>re-promulgated</strong> repeatedly, circumventing the 120-day limit.</div>
-          </div>
+          <div class="challenge-item"><div class="challenge-icon">🚫</div><div class="challenge-text">Bypasses <strong>democratic deliberation</strong>.</div></div>
+          <div class="challenge-item"><div class="challenge-icon">🔄</div><div class="challenge-text">Ordinances are often <strong>re-promulgated</strong> repeatedly.</div></div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="glass card reveal">
+  <!-- ===== SLIDE 10: CHALLENGES - STABILITY & SENATE ===== -->
+  <div class="slide" id="slide-10">
+    <div class="section-label">04 — Critical Issues</div>
+    <div class="bento-grid bento-2col">
+      <div class="glass card">
         <div class="badge badge-gold">Senate Limitation</div>
         <h3 class="card-title">Senate's Constrained Financial Role</h3>
-        <div class="card-body" style="margin-bottom:14px;">The upper house representing provinces has <strong>no veto power</strong> over Money Bills. It can only make recommendations within 14 days — which the National Assembly may choose to ignore entirely.</div>
-        <div class="quote-block">This weakens the Senate's role as a check on financial legislation impacting all provinces equally.</div>
+        <div class="card-body">The upper house has <strong>no veto power</strong> over Money Bills. It can only make recommendations within 14 days — which the NA may ignore.</div>
       </div>
-    </div>
-
-    <div class="bento-grid bento-2col">
-      <div class="glass card reveal">
+      <div class="glass card card-accent-red">
         <div class="badge badge-red">Instability</div>
         <h3 class="card-title">🏚️ Political Instability</h3>
         <div class="challenge-list">
-          <div class="challenge-item">
-            <div class="challenge-icon">🤝</div>
-            <div class="challenge-text"><strong>Coalition Fragility</strong> — Governments dependent on multiple parties face constant threat of collapse due to shifting alliances.</div>
-          </div>
-          <div class="challenge-item">
-            <div class="challenge-icon">🪑</div>
-            <div class="challenge-text"><strong>Opposition Boycotts</strong> — Frequent parliamentary boycotts paralyze legislative activity and reduce quorum.</div>
-          </div>
-          <div class="challenge-item">
-            <div class="challenge-icon">📉</div>
-            <div class="challenge-text"><strong>Polarized Environment</strong> — Deep political polarization reduces cross-party cooperation on critical legislation.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="glass card card-accent-blue reveal">
-        <div class="badge badge-blue">Reform Debate</div>
-        <h3 class="card-title">🗳️ Electoral Reforms</h3>
-        <div class="card-body" style="margin-bottom:14px;">Ongoing debates regarding the integrity and modernization of Pakistan's electoral process remain unresolved heading into 2026.</div>
-        <div class="challenge-list">
-          <div class="challenge-item">
-            <div class="challenge-icon">💻</div>
-            <div class="challenge-text"><strong>EVMs (Electronic Voting Machines)</strong> — Disputed proposals for digital voting amid concerns over transparency and hacking.</div>
-          </div>
-          <div class="challenge-item">
-            <div class="challenge-icon">🗺️</div>
-            <div class="challenge-text"><strong>Delimitation Controversies</strong> — Redrawing of constituency boundaries affects fair representation.</div>
-          </div>
-          <div class="challenge-item">
-            <div class="challenge-icon">🌍</div>
-            <div class="challenge-text"><strong>Overseas Voting</strong> — Millions of Pakistani diaspora demand participation rights in national elections.</div>
-          </div>
+          <div class="challenge-item"><div class="challenge-icon">🤝</div><div class="challenge-text"><strong>Coalition Fragility</strong> — Shifting alliances.</div></div>
+          <div class="challenge-item"><div class="challenge-icon">🪑</div><div class="challenge-text"><strong>Opposition Boycotts</strong> — Paralyzed activity.</div></div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ===== TIMELINE ===== -->
-  <section id="timeline-section" class="section reveal" style="margin-top:56px;">
+  <!-- ===== SLIDE 11: CHALLENGES - ELECTORAL REFORMS ===== -->
+  <div class="slide" id="slide-11">
+    <div class="section-label">04 — Critical Issues</div>
+    <h2 class="section-title">🗳️ Electoral Reforms</h2>
+    <div class="glass card card-accent-blue">
+      <div class="bento-grid bento-3col">
+        <div class="challenge-item"><div class="challenge-icon">💻</div><div class="challenge-text"><strong>EVMs</strong> — Digital voting transparency concerns.</div></div>
+        <div class="challenge-item"><div class="challenge-icon">🗺️</div><div class="challenge-text"><strong>Delimitation</strong> — Constituency boundary controversies.</div></div>
+        <div class="challenge-item"><div class="challenge-icon">🌍</div><div class="challenge-text"><strong>Overseas Voting</strong> — Diaspora participation rights.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SLIDE 12: TIMELINE 1 ===== -->
+  <div class="slide" id="slide-12">
     <div class="section-label">05 — Historical Evolution</div>
-    <h2 class="section-title">Parliament Through Time</h2>
+    <h2 class="section-title">Parliament Through Time (Part 1)</h2>
+    <div class="glass card">
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1947</div><div class="tl-event"><strong>Independence</strong> — First Constituent Assembly established.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1956</div><div class="tl-event"><strong>First Constitution</strong> — Islamic Republic with a parliamentary system.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1962</div><div class="tl-event"><strong>Ayub Era</strong> — Presidential system introduced.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1973</div><div class="tl-event"><strong>Current Constitution</strong> — Restores parliamentary system.</div></div>
+      </div>
+    </div>
+  </div>
 
-    <div class="bento-grid bento-2col">
-      <div class="glass card reveal">
-        <div class="card-title" style="margin-bottom:20px;">🕰️ Key Milestones</div>
-        <div class="timeline">
-          <div class="tl-item"><div class="tl-dot"></div>
-            <div class="tl-year">1947</div>
-            <div class="tl-event"><strong>Independence</strong> — Pakistan's first Constituent Assembly established under British-inherited parliamentary framework.</div>
+  <!-- ===== SLIDE 13: TIMELINE 2 ===== -->
+  <div class="slide" id="slide-13">
+    <div class="section-label">05 — Historical Evolution</div>
+    <h2 class="section-title">Parliament Through Time (Part 2)</h2>
+    <div class="glass card">
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2010</div><div class="tl-event"><strong>18th Amendment</strong> — Devolution of powers; Parliament strengthened.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2018</div><div class="tl-event"><strong>FATA Merger</strong> — Reshaping Senate composition to 96 seats.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2022</div><div class="tl-event"><strong>Historic No-Confidence</strong> — First successful removal of a sitting PM.</div></div>
+        <div class="tl-item"><div class="tl-dot" style="background:var(--accent2);"></div><div class="tl-year" style="color:var(--accent2);">2024–26</div><div class="tl-event"><strong>Current Era</strong> — Institutional reforms and democratic consolidation.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SLIDE 14: LEGISLATIVE FLOW ===== -->
+  <div class="slide" id="slide-14">
+    <div class="section-label">05 — Historical Evolution (Process)</div>
+    <h2 class="section-title">🔄 Legislative Flow Infographic</h2>
+    <div class="glass card card-accent-green">
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; align-items:center; gap:12px; padding: 10px 0; border-bottom: 1px solid var(--border);">
+            <div style="width:36px; height:36px; border-radius:10px; background:rgba(1,170,110,0.2); display:flex;align-items:center;justify-content:center;">📝</div>
+            <div><div style="font-weight:700; font-size:0.82rem;">Bill Introduced</div><div style="font-size:0.75rem; color:var(--text-muted);">Either house</div></div>
           </div>
-          <div class="tl-item"><div class="tl-dot"></div>
-            <div class="tl-year">1956</div>
-            <div class="tl-event"><strong>First Constitution</strong> — Pakistan declared Islamic Republic with a parliamentary system.</div>
+          <div style="display:flex; align-items:center; gap:12px; padding: 10px 0; border-bottom: 1px solid var(--border);">
+            <div style="width:36px; height:36px; border-radius:10px; background:rgba(0,212,255,0.12); display:flex;align-items:center;justify-content:center;">🔬</div>
+            <div><div style="font-weight:700; font-size:0.82rem;">Committee Scrutiny</div><div style="font-size:0.75rem; color:var(--text-muted);">Clause-by-clause</div></div>
           </div>
-          <div class="tl-item"><div class="tl-dot"></div>
-            <div class="tl-year">1962</div>
-            <div class="tl-event"><strong>Ayub Era</strong> — Presidential system introduced, dismantling parliamentary democracy.</div>
-          </div>
-          <div class="tl-item"><div class="tl-dot"></div>
-            <div class="tl-year">1973</div>
-            <div class="tl-event"><strong>Current Constitution</strong> — Z.A. Bhutto's landmark constitution restores parliamentary system, still in force today.</div>
-          </div>
-          <div class="tl-item"><div class="tl-dot"></div>
-            <div class="tl-year">2010</div>
-            <div class="tl-event"><strong>18th Amendment</strong> — Landmark devolution of powers to provinces; Presidential powers curtailed; Parliament strengthened.</div>
-          </div>
-          <div class="tl-item"><div class="tl-dot"></div>
-            <div class="tl-year">2018</div>
-            <div class="tl-event"><strong>FATA Merger</strong> — FATA integrated into KP, reshaping Senate composition to 96 seats.</div>
-          </div>
-          <div class="tl-item"><div class="tl-dot"></div>
-            <div class="tl-year">2022</div>
-            <div class="tl-event"><strong>Historic No-Confidence</strong> — First successful Vote of No-Confidence removes a sitting PM; constitutional precedent set.</div>
-          </div>
-          <div class="tl-item"><div class="tl-dot" style="background:var(--accent2);box-shadow:0 0 10px rgba(0,212,255,0.5);"></div>
-            <div class="tl-year" style="color:var(--accent2);">2024–26</div>
-            <div class="tl-event"><strong>Current Era</strong> — Ongoing institutional reforms, electoral debates, and democratic consolidation efforts.</div>
+          <div style="display:flex; align-items:center; gap:12px; padding: 10px 0;">
+            <div style="width:36px; height:36px; border-radius:10px; background:rgba(200,168,75,0.12); display:flex;align-items:center;justify-content:center;">🗳️</div>
+            <div><div style="font-weight:700; font-size:0.82rem;">House Vote</div><div style="font-size:0.75rem; color:var(--text-muted);">Final vote</div></div>
           </div>
         </div>
-      </div>
-
-      <!-- Infographic / Legislative Flow -->
-      <div class="glass card card-accent-green reveal">
-        <div class="card-title" style="margin-bottom: 16px;">🔄 Legislative Flow Infographic</div>
-        <!-- Visual Legislative Process -->
-        <div style="display:flex; flex-direction:column; gap:0;">
-          <!-- Steps with connectors -->
-          <div style="display:flex; align-items:center; gap:12px; padding: 12px 0; border-bottom: 1px solid var(--border);">
-            <div style="width:36px; height:36px; border-radius:10px; background:rgba(1,170,110,0.2); border:1px solid rgba(1,170,110,0.3); display:flex;align-items:center;justify-content:center; font-size:1rem;">📝</div>
-            <div>
-              <div style="font-family:var(--font-ui); font-weight:700; font-size:0.82rem;">Bill Introduced</div>
-              <div style="font-size:0.75rem; color:var(--text-muted);">Either house (except Money Bills → NA only)</div>
-            </div>
-            <div style="margin-left:auto; font-family:var(--font-ui); font-size:0.68rem; font-weight:700; color:var(--accent); background:rgba(1,170,110,0.1); padding:3px 8px; border-radius:6px;">Step 1</div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; align-items:center; gap:12px; padding: 10px 0; border-bottom: 1px solid var(--border);">
+            <div style="width:36px; height:36px; border-radius:10px; background:rgba(1,170,110,0.12); display:flex;align-items:center;justify-content:center;">🏛️</div>
+            <div><div style="font-weight:700; font-size:0.82rem;">Other House</div><div style="font-size:0.75rem; color:var(--text-muted);">Same process</div></div>
           </div>
-          <div style="display:flex; align-items:center; gap:12px; padding: 12px 0; border-bottom: 1px solid var(--border);">
-            <div style="width:36px; height:36px; border-radius:10px; background:rgba(0,212,255,0.12); border:1px solid rgba(0,212,255,0.2); display:flex;align-items:center;justify-content:center; font-size:1rem;">🔬</div>
-            <div>
-              <div style="font-family:var(--font-ui); font-weight:700; font-size:0.82rem;">Committee Scrutiny</div>
-              <div style="font-size:0.75rem; color:var(--text-muted);">Standing committee examines clause by clause</div>
-            </div>
-            <div style="margin-left:auto; font-family:var(--font-ui); font-size:0.68rem; font-weight:700; color:var(--accent2); background:rgba(0,212,255,0.1); padding:3px 8px; border-radius:6px;">Step 2</div>
+          <div style="display:flex; align-items:center; gap:12px; padding: 10px 0; border-bottom: 1px solid var(--border);">
+            <div style="width:36px; height:36px; border-radius:10px; background:rgba(255,100,100,0.1); display:flex;align-items:center;justify-content:center;">⚡</div>
+            <div><div style="font-weight:700; font-size:0.82rem;">Joint Sitting</div><div style="font-size:0.75rem; color:var(--text-muted);">Deadlock resolver</div></div>
           </div>
-          <div style="display:flex; align-items:center; gap:12px; padding: 12px 0; border-bottom: 1px solid var(--border);">
-            <div style="width:36px; height:36px; border-radius:10px; background:rgba(200,168,75,0.12); border:1px solid rgba(200,168,75,0.2); display:flex;align-items:center;justify-content:center; font-size:1rem;">🗳️</div>
-            <div>
-              <div style="font-family:var(--font-ui); font-weight:700; font-size:0.82rem;">House Vote</div>
-              <div style="font-size:0.75rem; color:var(--text-muted);">Third reading — final vote in originating house</div>
-            </div>
-            <div style="margin-left:auto; font-family:var(--font-ui); font-size:0.68rem; font-weight:700; color:var(--gold); background:rgba(200,168,75,0.1); padding:3px 8px; border-radius:6px;">Step 3</div>
-          </div>
-          <div style="display:flex; align-items:center; gap:12px; padding: 12px 0; border-bottom: 1px solid var(--border);">
-            <div style="width:36px; height:36px; border-radius:10px; background:rgba(1,170,110,0.12); border:1px solid rgba(1,170,110,0.2); display:flex;align-items:center;justify-content:center; font-size:1rem;">🏛️</div>
-            <div>
-              <div style="font-family:var(--font-ui); font-weight:700; font-size:0.82rem;">Other House</div>
-              <div style="font-size:0.75rem; color:var(--text-muted);">Repeats same 3-reading process</div>
-            </div>
-            <div style="margin-left:auto; font-family:var(--font-ui); font-size:0.68rem; font-weight:700; color:var(--accent); background:rgba(1,170,110,0.1); padding:3px 8px; border-radius:6px;">Step 4</div>
-          </div>
-          <div style="display:flex; align-items:center; gap:12px; padding: 12px 0; border-bottom: 1px solid var(--border);">
-            <div style="width:36px; height:36px; border-radius:10px; background:rgba(255,100,100,0.1); border:1px solid rgba(255,100,100,0.2); display:flex;align-items:center;justify-content:center; font-size:1rem;">⚡</div>
-            <div>
-              <div style="font-family:var(--font-ui); font-weight:700; font-size:0.82rem;">Joint Sitting (if disagreement)</div>
-              <div style="font-size:0.75rem; color:var(--text-muted);">Both houses vote together to resolve deadlock</div>
-            </div>
-            <div style="margin-left:auto; font-family:var(--font-ui); font-size:0.68rem; font-weight:700; color:#ff6b6b; background:rgba(255,100,100,0.08); padding:3px 8px; border-radius:6px;">If needed</div>
-          </div>
-          <div style="display:flex; align-items:center; gap:12px; padding: 12px 0;">
-            <div style="width:36px; height:36px; border-radius:10px; background:rgba(1,170,110,0.2); border:2px solid rgba(1,170,110,0.4); display:flex;align-items:center;justify-content:center; font-size:1rem;">✅</div>
-            <div>
-              <div style="font-family:var(--font-ui); font-weight:700; font-size:0.82rem;">Presidential Assent</div>
-              <div style="font-size:0.75rem; color:var(--text-muted);">Bill becomes enforceable Act of Parliament</div>
-            </div>
-            <div style="margin-left:auto; font-family:var(--font-ui); font-size:0.68rem; font-weight:700; color:var(--accent); background:rgba(1,170,110,0.15); padding:3px 8px; border-radius:6px;">Final</div>
+          <div style="display:flex; align-items:center; gap:12px; padding: 10px 0;">
+            <div style="width:36px; height:36px; border-radius:10px; background:rgba(1,170,110,0.2); border:2px solid rgba(1,170,110,0.4); display:flex;align-items:center;justify-content:center;">✅</div>
+            <div><div style="font-weight:700; font-size:0.82rem;">Presidential Assent</div><div style="font-size:0.75rem; color:var(--text-muted);">Act of Parliament</div></div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ===== CONCLUSION ===== -->
-  <section id="conclusion" class="section reveal" style="margin-top:56px;">
+  <!-- ===== SLIDE 15: CONCLUSION SUMMARY ===== -->
+  <div class="slide" id="slide-15">
     <div class="section-label">06 — Way Forward</div>
-    <h2 class="section-title">Conclusion & Recommendations</h2>
-
-    <!-- Summary Card -->
-    <div class="glass card-lg card-accent-green reveal" style="margin-bottom:16px;">
-      <div class="bento-grid bento-2col" style="gap:32px;">
-        <div>
-          <div class="badge badge-green">Summary</div>
-          <h3 class="card-title" style="font-size:1.3rem; margin-bottom:12px;">A Resilient but Imperfect System</h3>
-          <div class="card-body" style="font-size:0.9rem;">
-            Pakistan's parliamentary system has demonstrated remarkable <strong>constitutional resilience</strong> — surviving military interventions, economic crises, and political turmoil. The 1973 Constitution remains the foundational document, adapted through amendments to reflect evolving national needs.<br><br>
-            Yet the system faces <strong>structural weaknesses</strong>: executive dominance, weak committee culture, Senate's limited financial role, and frequent unconstitutional interruptions have impeded democratic consolidation.
-          </div>
-        </div>
-        <div>
-          <div class="badge badge-blue">The Path Forward</div>
-          <div class="forward-grid" style="grid-template-columns:1fr 1fr; margin-top:8px;">
-            <div class="forward-item">
-              <div class="forward-num">01</div>
-              <div class="forward-text"><strong>Empower the Senate</strong>Extend Senate's role in financial legislation — move beyond advisory recommendations.</div>
-            </div>
-            <div class="forward-item">
-              <div class="forward-num">02</div>
-              <div class="forward-text"><strong>Reduce Ordinances</strong>Constitutional limit on re-promulgation; mandatory parliamentary approval within 90 days.</div>
-            </div>
-            <div class="forward-item">
-              <div class="forward-num">03</div>
-              <div class="forward-text"><strong>Committee Reform</strong>Strengthen parliamentary committees with full-time members, independent research staff, and binding powers.</div>
-            </div>
-            <div class="forward-item">
-              <div class="forward-num">04</div>
-              <div class="forward-text"><strong>Electoral Integrity</strong>Transparent, technology-neutral electoral reforms with cross-party consensus before implementation.</div>
-            </div>
-          </div>
-        </div>
+    <h2 class="section-title">A Resilient but Imperfect System</h2>
+    <div class="glass card-lg card-accent-green">
+      <div class="card-body" style="font-size:1.1rem; line-height:1.8;">
+        Pakistan's parliamentary system has demonstrated remarkable <strong>constitutional resilience</strong> — surviving military interventions, economic crises, and political turmoil. The 1973 Constitution remains the foundational document.<br><br>
+        Yet the system faces <strong>structural weaknesses</strong>: executive dominance, weak committee culture, and Senate's limited financial role.
       </div>
     </div>
+  </div>
 
-    <!-- Three pillars conclusion -->
-    <div class="bento-grid bento-3col">
-      <div class="glass card reveal">
-        <div class="card-icon" style="font-size:1.8rem; width:52px; height:52px;">⚖️</div>
-        <div class="card-title">Separation of Powers</div>
-        <div class="card-body">The balance between Executive, Legislature, and Judiciary remains the bedrock of Pakistan's democratic framework — essential to protect individual rights and prevent authoritarianism.</div>
-      </div>
-      <div class="glass card card-accent-green reveal">
-        <div class="card-icon" style="font-size:1.8rem; width:52px; height:52px;">🗳️</div>
-        <div class="card-title">Democratic Maturity</div>
-        <div class="card-body">Completing full democratic terms (2008–13, 2013–18, 2018–22) and enforcing constitutional norms represents progress. Every peaceful transfer of power strengthens democratic culture.</div>
-      </div>
-      <div class="glass card card-accent-blue reveal">
-        <div class="card-icon" style="font-size:1.8rem; width:52px; height:52px;">🌟</div>
-        <div class="card-title">2026 Outlook</div>
-        <div class="card-body">Pakistan's Parliament heads into 2026 navigating <strong>economic pressures</strong>, political polarization, and reform imperatives — but with a constitutional framework capable of guiding democratic consolidation.</div>
-      </div>
+  <!-- ===== SLIDE 16: CONCLUSION RECOMMENDATIONS ===== -->
+  <div class="slide" id="slide-16">
+    <div class="section-label">06 — Way Forward (Future)</div>
+    <div class="forward-grid">
+      <div class="forward-item"><div class="forward-num">01</div><div class="forward-text"><strong>Empower Senate</strong>Extend role in financial legislation.</div></div>
+      <div class="forward-item"><div class="forward-num">02</div><div class="forward-text"><strong>Reduce Ordinances</strong>Constitutional limit on re-promulgation.</div></div>
+      <div class="forward-item"><div class="forward-num">03</div><div class="forward-text"><strong>Committee Reform</strong>Strengthen with research staff and binding powers.</div></div>
+      <div class="forward-item"><div class="forward-num">04</div><div class="forward-text"><strong>Electoral Integrity</strong>Transparent, technology-neutral reforms.</div></div>
     </div>
-  </section>
+    <div class="bento-grid bento-3col" style="margin-top:20px;">
+      <div class="glass card-sm"><div class="card-title" style="font-size:0.8rem;">⚖️ Separation of Powers</div></div>
+      <div class="glass card-sm card-accent-green"><div class="card-title" style="font-size:0.8rem;">🗳️ Democratic Maturity</div></div>
+      <div class="glass card-sm card-accent-blue"><div class="card-title" style="font-size:0.8rem;">🌟 2026 Outlook</div></div>
+    </div>
+  </div>
 
 </main>
 
+<!-- SLIDE CONTROLS -->
+<div class="controls-container">
+  <button id="prevBtn" class="glass control-btn">← Previous</button>
+  <div id="slide-counter" class="slide-counter">Slide 1 / 16</div>
+  <button id="nextBtn" class="glass control-btn">Next →</button>
+</div>
+
 <!-- FOOTER -->
 <footer>
-  <p>Parliamentary System of Pakistan — Structure, Working & Challenges | <strong>Through 2026</strong></p>
-  <p style="margin-top:8px; font-size:0.72rem; opacity:0.5;">Based on the 1973 Constitution of Pakistan · Information as of 2026 · Educational Reference</p>
+  <p>Parliamentary System of Pakistan | <strong>Through 2026</strong></p>
 </footer>
 
 <script src="script.js"></script>
