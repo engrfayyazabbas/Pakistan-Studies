@@ -1,67 +1,94 @@
-// ===== SLIDE STATE =====
-let currentSlideIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const slideNumDisplay = document.getElementById('slide-num');
-const progress = document.getElementById('progress');
+// ===================== STATE =====================
+let current = 0;
+const slides = () => document.querySelectorAll('.slide');
+const totalSlides = () => slides().length;
 
-// ===== SHOW SLIDE =====
-function showSlide(index) {
-  const slides = document.querySelectorAll('.slide');
-  const totalSlides = slides.length;
-  const slideNumDisplay = document.getElementById('slide-num');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const progress = document.getElementById('progress');
+// ===================== SHOW SLIDE =====================
+function showSlide(next) {
+  const all = slides();
+  const total = all.length;
+  if (next < 0 || next >= total) return;
 
-  // Clamp index
-  if (index < 0) index = 0;
-  if (index >= totalSlides) index = totalSlides - 1;
+  const prev = current;
+  current = next;
 
-  currentSlideIndex = index;
+  // Exit old slide
+  all[prev].classList.remove('active');
+  all[prev].classList.add('exit');
+  setTimeout(() => all[prev].classList.remove('exit'), 480);
 
-  // Update visibility
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === currentSlideIndex);
+  // Enter new slide
+  all[current].classList.add('active');
+
+  // Progress bar
+  const pct = ((current + 1) / total) * 100;
+  document.getElementById('progress').style.width = pct + '%';
+
+  // Counter text
+  document.getElementById('slide-num').textContent =
+    `${String(current + 1).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
+
+  // Dots
+  document.querySelectorAll('.slide-dot').forEach((d, i) => {
+    d.classList.toggle('active', i === current);
   });
 
-  // Update controls
-  prevBtn.disabled = currentSlideIndex === 0;
-  nextBtn.disabled = currentSlideIndex === totalSlides - 1;
+  // Buttons
+  document.getElementById('prevBtn').disabled = current === 0;
+  document.getElementById('nextBtn').disabled = current === total - 1;
 
-  // Update counter
-  slideNumDisplay.textContent = `Slide ${currentSlideIndex + 1} / ${totalSlides}`;
-
-  // Update progress bar
-  const pct = ((currentSlideIndex + 1) / totalSlides) * 100;
-  progress.style.width = `${pct}%`;
+  // Stagger animations
+  triggerStagger(all[current]);
 }
 
-// ===== NAVIGATION =====
-nextBtn.addEventListener('click', () => showSlide(currentSlideIndex + 1));
-prevBtn.addEventListener('click', () => showSlide(currentSlideIndex - 1));
+// ===================== STAGGER =====================
+function triggerStagger(slide) {
+  const items = slide.querySelectorAll('.stagger > *');
+  items.forEach(el => el.classList.remove('visible'));
+  items.forEach((el, i) => {
+    setTimeout(() => el.classList.add('visible'), 80 + i * 90);
+  });
+}
 
-// Keyboard support
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
-    showSlide(currentSlideIndex + 1);
-  } else if (e.key === 'ArrowLeft' || e.key === 'Backspace') {
-    showSlide(currentSlideIndex - 1);
-  }
+// ===================== DOTS =====================
+function buildDots() {
+  const container = document.getElementById('slide-dots');
+  if (!container) return;
+  slides().forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'slide-dot' + (i === 0 ? ' active' : '');
+    d.title = `Slide ${i + 1}`;
+    d.addEventListener('click', () => showSlide(i));
+    container.appendChild(d);
+  });
+}
+
+// ===================== NAVIGATION =====================
+document.getElementById('nextBtn').addEventListener('click', () => showSlide(current + 1));
+document.getElementById('prevBtn').addEventListener('click', () => showSlide(current - 1));
+
+// Keyboard
+document.addEventListener('keydown', e => {
+  if (['ArrowRight', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); showSlide(current + 1); }
+  else if (['ArrowLeft', 'Backspace'].includes(e.key)) { e.preventDefault(); showSlide(current - 1); }
 });
 
-// ===== THEME TOGGLE =====
-const themeToggle = document.getElementById('themeToggle');
-const html = document.documentElement;
-let isDark = true;
+// Touch swipe
+let touchX = null;
+document.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+document.addEventListener('touchend', e => {
+  if (touchX === null) return;
+  const dx = e.changedTouches[0].clientX - touchX;
+  if (Math.abs(dx) > 50) showSlide(dx < 0 ? current + 1 : current - 1);
+  touchX = null;
+}, { passive: true });
 
-themeToggle.addEventListener('click', () => {
-  isDark = !isDark;
-  html.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  themeToggle.textContent = isDark ? '☀️ Theme' : '🌙 Theme';
-});
-
-// Initialize
+// ===================== INIT =====================
+buildDots();
 showSlide(0);
+
+// Animate donut segments on load
+setTimeout(() => {
+  const segs = document.querySelectorAll('.donut-seg1, .donut-seg2, .donut-seg3');
+  segs.forEach(s => { s.style.transition = 'stroke-dasharray 1.2s cubic-bezier(0.4,0,0.2,1)'; });
+}, 300);

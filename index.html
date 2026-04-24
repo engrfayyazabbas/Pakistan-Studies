@@ -1,285 +1,403 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Parliamentary System of Pakistan — Presentation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="ppt-wrapper">
-  <!-- Progress -->
-  <div class="progress-container">
-    <div class="progress-bar" id="progress"></div>
-  </div>
+  <div class="progress-container"><div class="progress-bar" id="progress"></div></div>
 
-  <!-- MAIN SLIDES -->
   <main id="slide-container">
 
     <!-- SLIDE 1: TITLE -->
     <div class="slide hero-slide active">
-      <div style="margin-bottom: 20px;">
-        <img src="https://crystalpng.com/wp-content/uploads/2022/02/pieas-logo-png.png" alt="PIEAS Logo" style="height: 100px; width: auto;">
-      </div>
-      <h1 style="font-size: 3rem; line-height: 1.2;">Parliamentary System of <em>Pakistan</em></h1>
-      <div style="margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; text-align: left; width: 80%;">
-        <div>
-          <p style="font-size: 1.1rem; font-weight: 700; color: var(--accent); margin-bottom: 10px; text-transform: uppercase;">Presenters:</p>
-          <ul style="font-size: 1rem; line-height: 1.4;">
-            <li style="margin-bottom: 5px;">Fayyaz Abbas</li>
-            <li style="margin-bottom: 5px;">Abdul Wahid Tariq</li>
-            <li style="margin-bottom: 5px;">Hamza Hamid</li>
-            <li style="margin-bottom: 5px;">Haziq Sajjad</li>
+      <img src="https://crystalpng.com/wp-content/uploads/2022/02/pieas-logo-png.png" alt="PIEAS Logo" class="hero-logo">
+      <div class="hero-eyebrow"><span class="dot"></span>Pakistan Studies · 2026</div>
+      <h1>Parliamentary<br>System of <em>Pakistan</em></h1>
+      <div class="hero-meta">
+        <div class="meta-card">
+          <div class="meta-label">Presenters</div>
+          <ul>
+            <li>Fayyaz Abbas</li>
+            <li>Abdul Wahid Tariq</li>
+            <li>Hamza Hamid</li>
+            <li>Haziq Sajjad</li>
           </ul>
         </div>
-        <div style="display: flex; flex-direction: column; justify-content: flex-end;">
-          <p style="font-size: 1.1rem; font-weight: 700; color: var(--accent); margin-bottom: 5px; text-transform: uppercase;">Supervised By:</p>
-          <p style="font-size: 1.3rem; font-weight: 500;">Dr. Shahzad Fareed</p>
-          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 5px;">PIEAS University</p>
+        <div class="meta-card">
+          <div class="meta-label">Supervised By</div>
+          <div class="supervisor">Dr. Shahzad Fareed</div>
+          <div class="inst">PIEAS University · Islamabad</div>
         </div>
       </div>
     </div>
 
     <!-- SLIDE 2: OVERVIEW -->
     <div class="slide">
-      <div class="slide-header"><h2>Overview of Topics</h2></div>
-      <div class="slide-content">
-        <div class="content-grid">
-          <ul>
-            <li><strong>Introduction:</strong> Core Pillars and the 1973 Constitution.</li>
-            <li><strong>Structure:</strong> National Assembly (Lower House) & Senate (Upper House).</li>
-            <li><strong>Legislative Engine:</strong> How Laws are Made and the Committee System.</li>
-            <li><strong>Accountability:</strong> Executive Responsibility and Oversight.</li>
-            <li><strong>Systemic Challenges:</strong> Ordinances, Financial Limits, and Instability.</li>
-            <li><strong>Reforms:</strong> Electoral Modernization and Future Recommendations.</li>
-            <li><strong>Historical Evolution:</strong> Key Milestones in Pakistan's Parliament.</li>
-          </ul>
-          <div style="padding: 30px; border: 1px dashed var(--border); display: flex; align-items: center; justify-content: center; text-align: center;">
-            <p style="font-style: italic; color: var(--text-muted);">"A comprehensive look at the mechanisms governing the Islamic Republic of Pakistan."</p>
+      <div class="slide-label">Agenda</div>
+      <div class="slide-header"><h2>What We'll Cover</h2><div class="divider"></div></div>
+      <div class="overview-list stagger">
+        <div class="overview-item"><span class="ov-num">01</span><span class="ov-title">Core Foundations</span><span class="ov-sub">1973 Constitution & Pillars</span></div>
+        <div class="overview-item"><span class="ov-num">02</span><span class="ov-title">Parliament Structure</span><span class="ov-sub">National Assembly & Senate</span></div>
+        <div class="overview-item"><span class="ov-num">03</span><span class="ov-title">Legislative Engine</span><span class="ov-sub">How Laws Are Made</span></div>
+        <div class="overview-item"><span class="ov-num">04</span><span class="ov-title">Accountability</span><span class="ov-sub">Oversight & Executive Responsibility</span></div>
+        <div class="overview-item"><span class="ov-num">05</span><span class="ov-title">Systemic Challenges</span><span class="ov-sub">Ordinances, Finance & Instability</span></div>
+        <div class="overview-item"><span class="ov-num">06</span><span class="ov-title">Historical Milestones</span><span class="ov-sub">Key Events 1973–2022</span></div>
+        <div class="overview-item"><span class="ov-num">07</span><span class="ov-title">Reforms & Conclusion</span><span class="ov-sub">Recommendations & Outlook</span></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: CORE FOUNDATIONS -->
+    <div class="slide">
+      <div class="slide-label">Section 01</div>
+      <div class="slide-header"><h2>Core Foundations</h2><div class="divider"></div></div>
+      <div class="pillars stagger">
+        <div class="pillar-card">
+          <span class="p-icon">📜</span>
+          <div class="p-title">1973 Constitution</div>
+          <div class="p-text">Supreme law establishing a Federal Parliamentary Republic. Balances federal and provincial powers.</div>
+        </div>
+        <div class="pillar-card">
+          <span class="p-icon">🏛️</span>
+          <div class="p-title">The President</div>
+          <div class="p-text">Ceremonial Head of State. Represents national unity, elected by electoral college for 5 years.</div>
+        </div>
+        <div class="pillar-card">
+          <span class="p-icon">⚖️</span>
+          <div class="p-title">Prime Minister</div>
+          <div class="p-text">Chief Executive & Head of Government. Must command majority in the National Assembly.</div>
+        </div>
+        <div class="pillar-card">
+          <span class="p-icon">🤝</span>
+          <div class="p-title">Federal Cabinet</div>
+          <div class="p-text">Assists the PM in executive functions. Collectively responsible to the National Assembly.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: NATIONAL ASSEMBLY -->
+    <div class="slide">
+      <div class="slide-label">Section 02</div>
+      <div class="slide-header"><h2>National Assembly — Lower House</h2><div class="divider"></div></div>
+      <div class="c-grid c-grid-2" style="flex:1; align-items:start;">
+        <div class="stagger">
+          <div class="card" style="margin-bottom:14px;">
+            <h3>Role & Authority</h3>
+            <ul>
+              <li>Directly elected body representing the population</li>
+              <li>Fixed 5-year term unless dissolved earlier</li>
+              <li>Exclusive authority over Money Bills (budget & tax)</li>
+              <li>Prime Minister elected from among its members</li>
+              <li>Can remove PM via Vote of No-Confidence</li>
+            </ul>
+          </div>
+          <div class="card card-accent">
+            <h3>Key Power</h3>
+            <p>Only the National Assembly can originate and pass <strong>Money Bills</strong> — giving it supreme control over national finances.</p>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card" style="flex:1;">
+            <h3>Seat Composition</h3>
+            <div class="donut-wrap">
+              <svg class="donut-svg" viewBox="0 0 100 100">
+                <circle class="donut-bg" cx="50" cy="50" r="40"/>
+                <circle class="donut-seg1" cx="50" cy="50" r="40" stroke-dasharray="210 251"/>
+                <circle class="donut-seg2" cx="50" cy="50" r="40" stroke-dasharray="59 251" stroke-dashoffset="-210"/>
+                <circle class="donut-seg3" cx="50" cy="50" r="40" stroke-dasharray="10 251" stroke-dashoffset="-269"/>
+              </svg>
+              <div class="donut-center">
+                <div class="dc-num">336</div>
+                <div class="dc-label">Total Seats</div>
+              </div>
+              <div class="donut-legend">
+                <div class="dl-item"><div class="dl-swatch" style="background:var(--green)"></div>266 General Seats (79%)</div>
+                <div class="dl-item"><div class="dl-swatch" style="background:#6366f1"></div>60 Women Reserved (18%)</div>
+                <div class="dl-item"><div class="dl-swatch" style="background:var(--gold)"></div>10 Minorities (3%)</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 2: CORE PILLARS -->
+    <!-- SLIDE 5: SENATE -->
     <div class="slide">
-      <div class="slide-header"><h2>01. Core Foundations</h2></div>
-      <div class="slide-content">
-        <div class="content-grid">
-          <ul>
-            <li><strong>1973 Constitution:</strong> The supreme law establishing a Federal Parliamentary Republic.</li>
-            <li><strong>The President:</strong> Ceremonial Head of State representing the unity of the Republic.</li>
-            <li><strong>The Prime Minister:</strong> Chief Executive and Head of Government, accountable to the National Assembly.</li>
-            <li><strong>Federal Cabinet:</strong> Assists the PM in executive functions.</li>
-          </ul>
-          <div class="img-frame">
-            <img src="images/parliament-house.png" alt="Parliament House">
+      <div class="slide-label">Section 02</div>
+      <div class="slide-header"><h2>The Senate — Upper House</h2><div class="divider"></div></div>
+      <div class="c-grid c-grid-2" style="flex:1; align-items:start;">
+        <div class="stagger">
+          <div class="card" style="margin-bottom:14px;">
+            <h3>Purpose & Structure</h3>
+            <ul>
+              <li>Ensures <strong>equal provincial representation</strong></li>
+              <li>Permanent body — cannot be dissolved</li>
+              <li>Members serve staggered <strong>6-year terms</strong></li>
+              <li>96 seats total (post-FATA merger)</li>
+              <li>Debates all federal legislation except Money Bills</li>
+            </ul>
+          </div>
+          <div class="card card-gold">
+            <h3>Why It Matters</h3>
+            <p>The Senate prevents the larger provinces from dominating legislation, acting as a guardian of federalism.</p>
+          </div>
+        </div>
+        <div class="stagger" style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card stat-card"><div class="stat-num">96</div><div class="stat-label">Total Senate Seats</div></div>
+          <div class="card stat-card"><div class="stat-num">6 yrs</div><div class="stat-label">Member Term Length</div></div>
+          <div class="card stat-card"><div class="stat-num">4</div><div class="stat-label">Provinces Equally Represented</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: HOW LAWS ARE MADE -->
+    <div class="slide">
+      <div class="slide-label">Section 03</div>
+      <div class="slide-header"><h2>How Laws Are Made</h2><div class="divider"></div></div>
+      <div class="steps stagger" style="flex:1; justify-content:space-around;">
+        <div class="step">
+          <div class="step-icon">1</div>
+          <div class="step-body"><strong>Introduction (1st Reading)</strong><span>Bill introduced in either House (Money Bills only in NA). Title read aloud.</span></div>
+        </div>
+        <div class="step">
+          <div class="step-icon">2</div>
+          <div class="step-body"><strong>Debate (2nd Reading)</strong><span>General principles discussed. Members debate the need and scope of the Bill.</span></div>
+        </div>
+        <div class="step">
+          <div class="step-icon">3</div>
+          <div class="step-body"><strong>Committee Stage</strong><span>Referred to the relevant Standing Committee for clause-by-clause scrutiny and amendments.</span></div>
+        </div>
+        <div class="step">
+          <div class="step-icon">4</div>
+          <div class="step-body"><strong>Final Vote (3rd Reading)</strong><span>Voted on in the originating House, then transmitted to the other House for the same process.</span></div>
+        </div>
+        <div class="step">
+          <div class="step-icon">5</div>
+          <div class="step-body"><strong>Presidential Assent → Law</strong><span>Signed by the President. Deadlocks resolved via Joint Sitting of both Houses.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: OVERSIGHT -->
+    <div class="slide">
+      <div class="slide-label">Section 03</div>
+      <div class="slide-header"><h2>Accountability & Oversight</h2><div class="divider"></div></div>
+      <div class="c-grid c-grid-2" style="flex:1;">
+        <div class="stagger" style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card">
+            <h3>🔍 Standing Committees</h3>
+            <p>Monitor ministry performance, scrutinize budgets, and recommend corrective action.</p>
+          </div>
+          <div class="card">
+            <h3>❓ Question Hour</h3>
+            <p>Members hold ministers accountable by asking direct questions about their ministry's activities during every session.</p>
+          </div>
+          <div class="card">
+            <h3>📋 Public Accounts Committee</h3>
+            <p>Reviews all government spending to ensure funds are used lawfully and efficiently.</p>
+          </div>
+        </div>
+        <div class="stagger" style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card card-accent">
+            <h3>⚡ Vote of No-Confidence</h3>
+            <p>Any PM who loses the confidence of the majority in the National Assembly must resign. First successfully used in <strong>2022</strong>.</p>
+          </div>
+          <div class="card card-warn">
+            <h3>🚨 Adjournment Motions</h3>
+            <p>Opposition can force debate on urgent public issues — keeping the government answerable in real time.</p>
+          </div>
+          <div class="quote-card card">
+            <span class="q-mark">"</span>
+            <p>Committees are the eyes and ears of Parliament.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 3: NATIONAL ASSEMBLY -->
+    <!-- SLIDE 8: CHALLENGES -->
     <div class="slide">
-      <div class="slide-header"><h2>02. The National Assembly (Lower House)</h2></div>
-      <div class="slide-content">
-        <div class="content-grid">
-          <ul>
-            <li><strong>Representation:</strong> Directly elected members representing population demographics.</li>
-            <li><strong>Term:</strong> Fixed 5-year tenure unless dissolved earlier.</li>
-            <li><strong>Powers:</strong> Exclusive authority over <em>Money Bills</em> (budget and taxation).</li>
-            <li><strong>Government Formation:</strong> The PM is elected from among its members.</li>
-          </ul>
-          <div style="background: rgba(1,170,110,0.05); padding: 20px; border: 1px solid var(--accent);">
-            <h3 style="margin-bottom:10px;">Seat Composition</h3>
-            <p>• General Seats: 266</p>
-            <p>• Reserved (Women): 60</p>
-            <p>• Minorities: 10</p>
-            <p style="margin-top:10px; font-weight:700;">Total: 336</p>
+      <div class="slide-label">Section 04</div>
+      <div class="slide-header"><h2>Systemic Challenges</h2><div class="divider"></div></div>
+      <div class="c-grid c-grid-3" style="flex:1;">
+        <div class="stagger" style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card card-warn">
+            <span class="card-icon">📃</span>
+            <h3>Presidential Ordinances</h3>
+            <ul>
+              <li>Issued when Parliament is not in session</li>
+              <li>Valid for only 120 days</li>
+              <li>Routine re-promulgation bypasses democratic debate</li>
+            </ul>
+          </div>
+        </div>
+        <div class="stagger" style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card card-warn">
+            <span class="card-icon">💰</span>
+            <h3>Senate & Finance Gap</h3>
+            <ul>
+              <li>Senate has advisory powers only on Money Bills</li>
+              <li>Cannot veto National Assembly financial legislation</li>
+              <li>Weakens provincial say in federal budget</li>
+            </ul>
+          </div>
+        </div>
+        <div class="stagger" style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card card-warn">
+            <span class="card-icon">⚡</span>
+            <h3>Political Instability</h3>
+            <ul>
+              <li>Fragile coalitions cause policy inconsistency</li>
+              <li>Opposition boycotts paralyze legislation</li>
+              <li>Deep polarization blocks national consensus</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 4: THE SENATE -->
+    <!-- SLIDE 9: MILESTONES -->
     <div class="slide">
-      <div class="slide-header"><h2>02. The Senate (Upper House)</h2></div>
-      <div class="slide-content">
-        <div class="content-grid">
-          <ul>
-            <li><strong>Purpose:</strong> Ensures equal provincial representation, acting as a check on the Lower House.</li>
-            <li><strong>Term:</strong> Permanent body; members serve staggered 6-year terms.</li>
-            <li><strong>Composition:</strong> 96 seats (post-FATA merger).</li>
-            <li><strong>Role:</strong> Debates all federal legislation except Money Bills.</li>
-          </ul>
-          <div class="img-frame">
-            <img src="images/senate-hall.png" alt="Senate Hall">
+      <div class="slide-label">Section 05</div>
+      <div class="slide-header"><h2>Historical Milestones</h2><div class="divider"></div></div>
+      <div class="timeline stagger" style="flex:1; padding:10px 0;">
+        <div class="tl-item">
+          <div class="tl-year">1973</div>
+          <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+          <div class="tl-content"><strong>Constitution Adopted</strong><span>Current parliamentary constitution enacted, establishing Federal Parliamentary Republic.</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">1985</div>
+          <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+          <div class="tl-content"><strong>8th Amendment</strong><span>Introduced Article 58-2(b), giving President power to dissolve the National Assembly.</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2010</div>
+          <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+          <div class="tl-content"><strong>18th Amendment</strong><span>Landmark devolution of power to provinces. Abolished the concurrent legislative list.</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2018</div>
+          <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+          <div class="tl-content"><strong>FATA–KP Merger</strong><span>Tribal areas merged into Khyber Pakhtunkhwa, reshaping the Senate's composition to 96 seats.</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2022</div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-content"><strong>First Successful No-Confidence Vote</strong><span>Historic removal of a sitting Prime Minister through constitutional Vote of No-Confidence.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 10: ELECTORAL REFORMS -->
+    <div class="slide">
+      <div class="slide-label">Section 05</div>
+      <div class="slide-header"><h2>Electoral Reform Agenda</h2><div class="divider"></div></div>
+      <div class="c-grid c-grid-2" style="flex:1;">
+        <div class="stagger" style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card">
+            <span class="card-icon">🖥️</span>
+            <h3>Electronic Voting Machines</h3>
+            <p>Ongoing national debate on adopting EVMs. Supporters cite speed and fraud reduction; critics question reliability and transparency.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🗺️</span>
+            <h3>Delimitation of Constituencies</h3>
+            <p>Redrawing of constituency boundaries remains contested, with concerns over gerrymandering and population accuracy.</p>
+          </div>
+        </div>
+        <div class="stagger" style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card">
+            <span class="card-icon">✈️</span>
+            <h3>Overseas Voting Rights</h3>
+            <p>Over 9 million Pakistanis abroad. Granting them voting rights could significantly shift electoral outcomes.</p>
+          </div>
+          <div class="card card-accent">
+            <span class="card-icon">🎯</span>
+            <h3>Core Goal</h3>
+            <p>Modernize the election system to ensure <strong>credible, transparent, and inclusive</strong> elections — the bedrock of parliamentary legitimacy.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 5: LEGISLATIVE PROCESS (1) -->
+    <!-- SLIDE 11: RECOMMENDATIONS -->
     <div class="slide">
-      <div class="slide-header"><h2>03. How Laws Are Made (Part 1)</h2></div>
-      <div class="slide-content">
-        <ul>
-          <li><strong>Introduction:</strong> A Bill can originate in either House (except Money Bills).</li>
-          <li><strong>First Reading:</strong> Introduction and formal presentation.</li>
-          <li><strong>Second Reading:</strong> General discussion on the principles of the Bill.</li>
-          <li><strong>Committee Stage:</strong> Scrutiny by the relevant Standing Committee; clause-by-clause examination.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- SLIDE 6: LEGISLATIVE PROCESS (2) -->
-    <div class="slide">
-      <div class="slide-header"><h2>03. How Laws Are Made (Part 2)</h2></div>
-      <div class="slide-content">
-        <ul>
-          <li><strong>Third Reading:</strong> Final debate and vote in the originating House.</li>
-          <li><strong>Transmission:</strong> Bill sent to the other House for the same process.</li>
-          <li><strong>Presidential Assent:</strong> Once passed by both Houses, it is sent to the President to be signed into Law.</li>
-          <li><strong>Deadlock:</strong> Resolved via a Joint Sitting of both Houses.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- SLIDE 7: COMMITTEES & OVERSIGHT -->
-    <div class="slide">
-      <div class="slide-header"><h2>03. Oversight Mechanisms</h2></div>
-      <div class="slide-content">
-        <div class="content-grid">
-          <ul>
-            <li><strong>Standing Committees:</strong> Monitor ministry performance and scrutinize budgets.</li>
-            <li><strong>Question Hour:</strong> Members ask Ministers questions about ministry activities.</li>
-            <li><strong>Adjournment Motions:</strong> Used to discuss matters of urgent public importance.</li>
-          </ul>
-          <div style="padding: 20px; border-left: 4px solid var(--accent); background: rgba(255,255,255,0.02);">
-            <em>"Committees are the eyes and ears of the Parliament."</em>
+      <div class="slide-label">Section 06</div>
+      <div class="slide-header"><h2>Recommendations</h2><div class="divider"></div></div>
+      <div class="c-grid c-grid-3" style="flex:1;">
+        <div class="stagger" style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card card-accent">
+            <span class="card-icon">⬆️</span>
+            <h3>Empower the Senate</h3>
+            <p>Grant the Upper House greater authority on Money Bills to ensure meaningful provincial input on national finances.</p>
+          </div>
+        </div>
+        <div class="stagger" style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card card-accent">
+            <span class="card-icon">🔒</span>
+            <h3>Limit Ordinances</h3>
+            <p>Enforce strict constitutional limits on re-promulgation to restore legislative supremacy of Parliament.</p>
+          </div>
+        </div>
+        <div class="stagger" style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card card-accent">
+            <span class="card-icon">🔬</span>
+            <h3>Strengthen Committees</h3>
+            <p>Provide independent research staff, expert witnesses, and broader investigative powers to parliamentary committees.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 8: ACCOUNTABILITY -->
+    <!-- SLIDE 12: CONCLUSION -->
     <div class="slide">
-      <div class="slide-header"><h2>03. Executive Accountability</h2></div>
-      <div class="slide-content">
-        <ul>
-          <li><strong>Collective Responsibility:</strong> The PM and Cabinet are responsible to the National Assembly.</li>
-          <li><strong>Vote of No-Confidence:</strong> Constitutional mechanism to remove a PM if they lose majority support.</li>
-          <li><strong>Parliamentary Scrutiny:</strong> Financial oversight through the Public Accounts Committee (PAC).</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- SLIDE 9: ORDINANCES -->
-    <div class="slide">
-      <div class="slide-header"><h2>04. Challenges: Presidential Ordinances</h2></div>
-      <div class="slide-content">
-        <ul>
-          <li><strong>Definition:</strong> Laws promulgated by the President when Parliament is not in session.</li>
-          <li><strong>Validity:</strong> Valid for 120 days; must be approved by Parliament to continue.</li>
-          <li><strong>Concern:</strong> Over-reliance on Ordinances bypasses democratic debate and scrutiny.</li>
-          <li><strong>Trend:</strong> Routine re-promulgation often circumvents constitutional limits.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- SLIDE 10: FINANCIAL LIMITATIONS -->
-    <div class="slide">
-      <div class="slide-header"><h2>04. Challenges: Senate & Finance</h2></div>
-      <div class="slide-content">
-        <div class="content-grid">
-          <ul>
-            <li>Senate has only <strong>advisory powers</strong> on Money Bills.</li>
-            <li>It cannot veto financial legislation passed by the National Assembly.</li>
-            <li>This weakens provincial say in federal budget allocations.</li>
-          </ul>
-          <div style="padding: 20px; background: rgba(220,50,50,0.05); border: 1px solid #ff6b6b;">
-            <strong>Impact:</strong> Reduced provincial oversight on national economic policy.
+      <div class="slide-label">Section 06</div>
+      <div class="slide-header"><h2>Conclusion</h2><div class="divider"></div></div>
+      <div class="c-grid c-grid-2" style="flex:1;">
+        <div class="stagger" style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card">
+            <h3>🛡️ Constitutional Resilience</h3>
+            <p>Despite martial laws, political crises, and institutional breakdowns, Pakistan's parliamentary framework has endured and evolved since 1973.</p>
+          </div>
+          <div class="card">
+            <h3>🔑 Path Forward</h3>
+            <ul>
+              <li>Electoral integrity must be non-negotiable</li>
+              <li>Separation of powers must be strictly upheld</li>
+              <li>Institutional maturity over short-term gains</li>
+            </ul>
+          </div>
+        </div>
+        <div class="stagger" style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card card-gold" style="flex:1; justify-content:center;">
+            <span class="card-icon">🔭</span>
+            <h3>Outlook 2026</h3>
+            <p style="font-size:0.88rem; line-height:1.7; color:rgba(255,255,255,0.8);">Pakistan stands at a democratic crossroads. Navigating electoral reform, economic stability, and civil–military balance will define the next chapter of parliamentary governance.</p>
+          </div>
+          <div class="quote-card card">
+            <span class="q-mark">"</span>
+            <p>Democracy is not a destination — it is a continuous journey of accountability and reform.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 11: INSTABILITY -->
-    <div class="slide">
-      <div class="slide-header"><h2>04. Challenges: Political Instability</h2></div>
-      <div class="slide-content">
-        <ul>
-          <li><strong>Fragile Coalitions:</strong> Governments often rely on small parties, leading to policy inconsistency.</li>
-          <li><strong>Opposition Boycotts:</strong> Frequent walkouts paralyze legislative progress.</li>
-          <li><strong>Polarization:</strong> High tension between parties hinders consensus on national issues.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- SLIDE 12: ELECTORAL REFORMS -->
-    <div class="slide">
-      <div class="slide-header"><h2>04. Challenges: Electoral Reform</h2></div>
-      <div class="slide-content">
-        <ul>
-          <li><strong>EVMs:</strong> Ongoing debate over the use of Electronic Voting Machines.</li>
-          <li><strong>Transparency:</strong> Need for modernization to ensure credible elections.</li>
-          <li><strong>Delimitation:</strong> Redrawing constituency boundaries remains controversial.</li>
-          <li><strong>Overseas Voting:</strong> Granting voting rights to the diaspora.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- SLIDE 13: MILESTONES -->
-    <div class="slide">
-      <div class="slide-header"><h2>05. Historical Milestones</h2></div>
-      <div class="slide-content">
-        <ul>
-          <li><strong>1973:</strong> Adoption of the current Parliamentary Constitution.</li>
-          <li><strong>2010:</strong> 18th Amendment (Power devolved to provinces).</li>
-          <li><strong>2018:</strong> FATA merger into KP (Reshaping Senate).</li>
-          <li><strong>2022:</strong> First successful Vote of No-Confidence against a PM.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- SLIDE 14: RECOMMENDATIONS (1) -->
-    <div class="slide">
-      <div class="slide-header"><h2>06. Recommendations</h2></div>
-      <div class="slide-content">
-        <ul>
-          <li><strong>Empower the Senate:</strong> Give the Upper House more authority on financial matters.</li>
-          <li><strong>Limit Ordinances:</strong> Enforce strict rules against re-promulgating temporary laws.</li>
-          <li><strong>Strengthen Committees:</strong> Provide independent research staff and more oversight powers.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- SLIDE 15: RECOMMENDATIONS (2) -->
-    <div class="slide">
-      <div class="slide-header"><h2>06. Conclusion</h2></div>
-      <div class="slide-content">
-        <div class="content-grid">
-          <ul>
-            <li>The system has shown <strong>Constitutional Resilience</strong> despite numerous crises.</li>
-            <li>Continued progress depends on <strong>Electoral Integrity</strong> and institutional maturity.</li>
-            <li>Separation of powers must be upheld to protect democracy.</li>
-          </ul>
-          <div style="background: var(--accent); color: white; padding: 20px; font-weight: 700;">
-            Outlook 2026: Navigating reforms toward democratic consolidation.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 16: THANK YOU -->
-    <div class="slide hero-slide">
+    <!-- SLIDE 13: THANK YOU -->
+    <div class="slide thankyou-slide">
       <h1>Thank You</h1>
       <p>Parliamentary System of Pakistan</p>
-      <p style="font-size:1rem; margin-top:20px; opacity:0.5;">Education Reference · Islamabad · 2026</p>
+      <p>PIEAS University · Dr. Shahzad Fareed · 2026</p>
+      <div class="ty-badge">
+        <span class="badge">📜 1973 Constitution</span>
+        <span class="badge">🏛️ Bicameral Legislature</span>
+        <span class="badge">⚖️ Democratic Governance</span>
+      </div>
     </div>
 
   </main>
@@ -287,13 +405,14 @@
   <!-- CONTROLS -->
   <div class="ppt-controls">
     <div class="btn-group">
-      <button class="ppt-btn" id="prevBtn">← Previous</button>
+      <button class="ppt-btn" id="prevBtn" disabled>← Prev</button>
       <button class="ppt-btn" id="nextBtn">Next →</button>
     </div>
-    <div class="slide-num" id="slide-num">Slide 1 / 16</div>
-    <div class="btn-group">
-      <button class="ppt-btn" id="themeToggle">☀️ Theme</button>
+    <div class="slide-counter">
+      <div class="slide-dots" id="slide-dots"></div>
+      <span id="slide-num">01 / 13</span>
     </div>
+    <div class="btn-group" style="visibility:hidden; width:120px;"></div>
   </div>
 </div>
 
